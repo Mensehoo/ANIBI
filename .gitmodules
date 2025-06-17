@@ -1,0 +1,15 @@
+[submodule "vendor/dompdf/dompdf"]
+	path = vendor/dompdf/dompdf
+	url = https://github.com/dompdf/dompdf.git
+[submodule "vendor/dompdf/php-font-lib"]
+	path = vendor/dompdf/php-font-lib
+	url = https://github.com/dompdf/php-font-lib.git
+[submodule "vendor/dompdf/php-svg-lib"]
+	path = vendor/dompdf/php-svg-lib
+	url = https://github.com/dompdf/php-svg-lib.git
+[submodule "vendor/masterminds/html5"]
+	path = vendor/masterminds/html5
+	url = https://github.com/Masterminds/html5-php.git
+[submodule "vendor/sabberworm/php-css-parser"]
+	path = vendor/sabberworm/php-css-parser
+	url = https://github.com/sabberworm/php-css-parser.git 
