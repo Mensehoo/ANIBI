@@ -1,0 +1,35 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: anibi-app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - anibi-network
+
+  db:
+    image: mysql:8.0
+    container_name: anibi-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: anibi_db
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_USER: anibi_user
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - anibi-network
+
+networks:
+  anibi-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local 
